@@ -183,12 +183,12 @@ bool ChangeSet::ChangeOperation()
 bool ChangeSet::JoinOperation(QString student, const QString &association)
 {
     int st_idx = getIdx(IS_STUDENT,student);     //得到该学生索引
-    if(st_idx == NO_RESULT ) {
+    if( st_idx == NO_RESULT ) {
         ShowHint(QString("Error"),QString("此学生不存在!请重新输入！"));
         return false;
     }
-    int ass_idx  =getIdx(IS_ASSOCIATION,association);
-    if(ass_idx == NO_RESULT ) {
+    int ass_idx = getIdx(IS_ASSOCIATION,association);
+    if( ass_idx == NO_RESULT ) {
         ShowHint(QString("Error"),QString("此社团不存在!请重新输入"));
         return false;
     }

@@ -385,11 +385,17 @@ void MainWindow::acceptChangeStudent()
     change_student->setIntroduce(ui->information_tableWidget->item(5,0)->text());
 
     for(int i=0;i<ui->list_tableWidget->rowCount();i++)
-        str_list<<ui->list_tableWidget->item(i,0)->text()+"|"+ui->list_tableWidget->item(i,1)->text();
+        str_list<<ui->list_tableWidget->item(i,0)->text();
     change_student->setJionedAssociation(str_list);
 
     if(change_student->JudgeLegal(CHECK_LEGAL,*change_student)) {
         int idx = getIdx(IS_STUDENT,student_searchbox->text());
+
+        str_list.clear();
+        for(int i=0;i<ui->list_tableWidget->rowCount();i++)
+            str_list<<ui->list_tableWidget->item(i,0)->text()+"|"+ui->list_tableWidget->item(i,1)->text();
+        change_student->setJionedAssociation(str_list);
+
         /******       修改数据红黑树          *********/
         auto it =student_DB->find(idx);
         it->sex=change_student->getSex();
