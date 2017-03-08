@@ -8,13 +8,7 @@ KeyList::KeyList()
 
 KeyList::~KeyList()
 {
-    NodeIndex *tmp;
-    while (head->next != NULL) {
-        tmp = head->next;
-        head->next=tmp->next;
-        delete tmp;
-    }
-    delete head;
+    clear();
 }
 
 void KeyList::init()
@@ -25,21 +19,14 @@ void KeyList::init()
 }
 
 
-void KeyList::push_back(const NodeIndex &index)
+void KeyList::push_back(const NodeIndex &value)
 {
     NodeIndex *tmp_insert;
-    tmp_insert = new NodeIndex(index);
+    tmp_insert = new NodeIndex(value);
 
-    /*
     tail->next = tmp_insert;
     tail = tmp_insert;
-    */
-
-
-    NodeIndex *tmp_next = head->next;
-    head->next=tmp_insert;
-    tmp_insert->next = tmp_next;
-
+    tail->next=NULL;
 
 }
 
@@ -54,27 +41,30 @@ void KeyList::clear()
     delete head;
 }
 
-bool KeyList::erase(const QString &index)
+bool KeyList::erase(const QString &value)
 {
-    bool is_ID = index[0].isNumber();
+    bool is_ID = value[0].isNumber();
     NodeIndex *tmp;
+    NodeIndex *pre = head;
     if(is_ID){
-        while (head->next != NULL) {
-            if(head->next->ID==index) {
-                tmp = head->next;
-                head->next = tmp->next;
+        while (pre->next != NULL) {
+            if(pre->next->ID==value) {
+                tmp = pre->next;
+                pre->next = tmp->next;
                 delete tmp;
                 return true;
             }
+            pre = pre->next;
         }
     } else {
-        while (head->next != NULL) {
-            if(head->next->name == index ) {
-                tmp = head->next;
-                head->next = tmp->next;
+        while (pre->next != NULL) {
+            if(pre->next->name == value ) {
+                tmp = pre->next;
+                pre->next = tmp->next;
                 delete tmp;
                 return true;
             }
+            pre = pre->next;
         }
     }
     return false;

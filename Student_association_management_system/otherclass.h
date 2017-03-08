@@ -16,6 +16,7 @@ public:
         index = _index;
         ID = _ID;
         name = _name;
+        next = NULL;
     }
 
     int index;
@@ -34,7 +35,7 @@ public:
                 const QString &_ID,
                 const QString &_name,
                 const bool &_sex,
-                const int &_grade,
+                const QString &_grade,
                 const QString &_major,
                 const QStringList &_joined_association = QStringList(),
                 const QString &_introduce = QString("无"))
@@ -53,7 +54,7 @@ public:
     QString ID;
     QString name;
     bool sex;
-    int grade;
+    QString grade;
     QString major;
     QStringList joined_association;
     QString introduce;

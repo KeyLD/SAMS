@@ -18,6 +18,8 @@
 #include "searchbox.h"
 #include "keylist.h"
 #include "hashtable.h"
+#include "student.h"
+#include "association.h"
 
 extern QString path;
 extern KeyList *student_list;
@@ -43,6 +45,10 @@ public:
     explicit ChangeSet(int _obj,int _op,QWidget *parent = 0);
     ~ChangeSet();
 
+public slots:
+    void changeStudent(Student &student);
+    void changeAssociation(Association &association);
+
 private slots:
     void OperationSet();
 
@@ -60,6 +66,8 @@ private:
     bool ExitOperation(QString student,const QString &association);
 
     void ShowHint(const QString &type,const QString &title);
+    int getIdx(int judge, QString edited);
+    void StudentExitAssociation(const QString &student, const QString &association);
 };
 
 #endif // CHANGESET_H

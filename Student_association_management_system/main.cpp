@@ -2,6 +2,7 @@
 #include <QApplication>
 #include <QFile>
 #include <QTextCodec>
+#include <exception>
 
 QString path = "/home/key/Code/c++_code/qt/Student_association_management_system/resource/";
 KeyList *student_list;
@@ -23,6 +24,7 @@ int main(int argc, char *argv[])
 
     MainWindow w;
     w.show();
+
 
     return a.exec();
 }

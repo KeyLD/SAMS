@@ -5,6 +5,7 @@
 
 #include <QMainWindow>
 #include <QAction>
+#include <QHBoxLayout>
 #include "keylist.h"
 #include "student.h"
 #include "association.h"
@@ -44,14 +45,6 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    //bool eventFilter(QObject *obj, QEvent *ev) override;
-    //void showCompletion(const QStringList &choices);
-
-/*
-protected:
-    void keyPressEvent ( QKeyEvent * e );
-*/
-
 private slots:
     void OpenUrl(const QString &link);
     void ShowStudent();                    //在主界面右侧显示学生信息
@@ -61,6 +54,7 @@ private slots:
     void ShowChangeAssociationDialog();    //在ChangeSet界面修改社团信息
     void ShowJoinDialog();                 //在ChangeSet界面加入社团
     void ShowExitDialog();                 //在ChangeSet界面推出社团
+    void CloseInformation();               //关闭右侧界面
 
     //void StudentRadar(const QString &strText);
     //void AssociationRadar(const QString &strText);
@@ -69,28 +63,18 @@ private slots:
     //void preventSuggest();
     //void autoSuggest();
 
+    void on_toolBox_currentChanged(int index);
+
+    void on_tabWidget_currentChanged(int index);
+
 private:
     Ui::MainWindow *ui;
 
     SearchBox *student_searchbox;
     SearchBox *association_searchbox;
 
-    KeyList *st_test;
-    KeyList *ass_test;
-
-    /*
-    QLineEdit *student_editor;
-    QTreeWidget *student_popup;
-    QTimer *student_timer;
-    QLineEdit *association_editor;
-    QTreeWidget *association_popup;
-    QTimer *association_timer;
-
-    */
     void IndexFileInit();
     void DBFileInit();
-    //void SearchInit();
-
 
     void ShowAddStudentDialog();
     void ShowStudentInformationDialog();   //新生对话框确认学生信息
@@ -102,14 +86,21 @@ private:
     void DeleteStudent(const QString &student);
     void JionAssociation(const QString &ass);
     void QuitAssociation(const QString &ass);
+    void acceptChangeStudent();
 
     void AddAssociation(Association &association);
     void DeleteAssociation(const QString &association);
     bool ChangeAssociation(const QString &association);
+    void acceptChangeAssociation();
+
+    void DeleteOperation();
+    void ChangeOperation();
+    void StudentExitAssociation(const QString &student,const QString &association);
 
     int getIdx(bool judge,QString edited);
     void readIntoFiles();
 
+    void ShowInformation(const QString &information);
     void ShowError(const QString &error);
 
     QAction *SwitchPage;

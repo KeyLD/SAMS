@@ -126,9 +126,6 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="1">
-           <widget class="QTextEdit" name="introduce_textEdit"/>
-          </item>
           <item row="6" column="0">
            <widget class="QWidget" name="widget_2" native="true">
             <layout class="QFormLayout" name="formLayout">
@@ -142,8 +139,11 @@
             </layout>
            </widget>
           </item>
+          <item row="5" column="1">
+           <widget class="QPlainTextEdit" name="joined_ass_Edit"/>
+          </item>
           <item row="6" column="1">
-           <widget class="QPlainTextEdit" name="plainTextEdit"/>
+           <widget class="QPlainTextEdit" name="introduce_Edit"/>
           </item>
          </layout>
         </item>

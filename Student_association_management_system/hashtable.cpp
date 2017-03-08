@@ -26,14 +26,16 @@ int HashTable::Search(const QString &key)
 {
     int reflect = Reflect(key);
     int pos = reflect;
-    //qDebug()<<"hash "<<hash_array[pos].hash;
-    for(int i = 1 ; hash_array[pos].hash != reflect && i < max_cnt ; i++ ){
+
+    for(int i = 1 ;i < max_cnt ; i++ ){
+        if(hash_array[pos].hash == reflect &&hash_array[pos].key == key)
+            break;
         pos = (pos + 1) % len;
     }
-    //qDebug()<<QString("pos %1 ").arg(pos);
-    //qDebug()<<QString("reflect %1").arg(reflect);
-    //qDebug()<<QString("value %1").arg(hash_array[pos].value);
-    if(hash_array[pos].hash == reflect)
+    qDebug()<<QString("pos %1 ").arg(pos);
+    qDebug()<<QString("reflect %1").arg(reflect);
+    qDebug()<<QString("value %1").arg(hash_array[pos].value);
+    if(hash_array[pos].hash == reflect && hash_array[pos].key == key )
         return hash_array[pos].value;
     else
         return NO_RESULT;
@@ -108,9 +110,9 @@ int HashTable::Reflect(QString key)
     std::string str = key.toStdString().c_str();
     const char* ch = str.c_str();
     for(int i=0;i<key.length();i++)
-        reflect = (reflect + ch[i] - '0'+len*2)%len;
+        reflect = (reflect + ch[i] - '0'+len*10)%len;
     //需测试
-    qDebug()<<key<<"        "<<reflect;
+    //qDebug()<<key<<"        "<<reflect;
     return reflect;
 }
 

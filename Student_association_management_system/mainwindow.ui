@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>662</width>
-    <height>473</height>
+    <width>742</width>
+    <height>520</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -52,7 +52,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <property name="iconSize">
        <size>
@@ -201,7 +201,7 @@
              <x>0</x>
              <y>0</y>
              <width>182</width>
-             <height>264</height>
+             <height>311</height>
             </rect>
            </property>
            <attribute name="label">
@@ -325,8 +325,8 @@
             <widget class="QTableWidget" name="list_tableWidget"/>
            </widget>
           </item>
-          <item>
-           <widget class="QWidget" name="widget_5" native="true">
+          <item alignment="Qt::AlignRight">
+           <widget class="QWidget" name="right_button_box" native="true">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -341,16 +341,23 @@
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_4">
              <item>
-              <widget class="QPushButton" name="pushButton_2">
+              <widget class="QPushButton" name="delete_pushButton">
                <property name="text">
                 <string>删除</string>
                </property>
               </widget>
              </item>
-             <item>
-              <widget class="QPushButton" name="pushButton">
+             <item alignment="Qt::AlignRight">
+              <widget class="QPushButton" name="change_pushButton">
                <property name="text">
                 <string>修改</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="finish_pushButton">
+               <property name="text">
+                <string>返回</string>
                </property>
               </widget>
              </item>
@@ -378,7 +385,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>662</width>
+     <width>742</width>
      <height>20</height>
     </rect>
    </property>

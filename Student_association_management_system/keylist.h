@@ -12,9 +12,9 @@ public:
     ~KeyList();
     NodeIndex *getHead();
     void init();
-    void push_back(const NodeIndex &index);
+    void push_back(const NodeIndex &value);
     void clear();
-    bool erase(const QString &index);
+    bool erase(const QString &value);
     bool isEmpty();
     NodeIndex* theNewestOne();
 
