@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Association</class>
+ <widget class="QDialog" name="Association">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>502</width>
+    <height>482</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>502</width>
+    <height>482</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>填写社团信息</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>321</width>
+       <height>361</height>
+      </size>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="ID_label">
+          <property name="minimumSize">
+           <size>
+            <width>90</width>
+            <height>23</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>  社团编号  </string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="ID_lineEdit">
+          <property name="minimumSize">
+           <size>
+            <width>223</width>
+            <height>23</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="name_label">
+          <property name="minimumSize">
+           <size>
+            <width>90</width>
+            <height>23</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>  社团名称  </string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="name_lineEdit">
+          <property name="minimumSize">
+           <size>
+            <width>223</width>
+            <height>23</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="created_time_label">
+          <property name="maximumSize">
+           <size>
+            <width>90</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>  成立时间  </string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QDateEdit" name="created_time_dateEdit">
+          <property name="minimumSize">
+           <size>
+            <width>223</width>
+            <height>24</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="chairman_label">
+          <property name="minimumSize">
+           <size>
+            <width>90</width>
+            <height>23</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>  会长学号  </string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="chairman_lineEdit">
+          <property name="minimumSize">
+           <size>
+            <width>223</width>
+            <height>23</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="vice_chairman_label">
+          <property name="minimumSize">
+           <size>
+            <width>83</width>
+            <height>23</height>
+           </size>
+          </property>
+          <property name="text">
+           <string> 副会长学号</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="vice_chairman_lineEdit">
+          <property name="minimumSize">
+           <size>
+            <width>223</width>
+            <height>23</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="secretary_label">
+          <property name="minimumSize">
+           <size>
+            <width>83</width>
+            <height>23</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>  秘书学号 </string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="secretary_lineEdit">
+          <property name="minimumSize">
+           <size>
+            <width>223</width>
+            <height>23</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="other_member_label">
+          <property name="minimumSize">
+           <size>
+            <width>90</width>
+            <height>31</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>  其他成员  </string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QPlainTextEdit" name="other_member_plainTextEdit">
+          <property name="minimumSize">
+           <size>
+            <width>223</width>
+            <height>94</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1">
+         <widget class="QPlainTextEdit" name="introduce_plainTextEdit">
+          <property name="minimumSize">
+           <size>
+            <width>223</width>
+            <height>99</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0">
+         <widget class="QLabel" name="introduce_label">
+          <property name="minimumSize">
+           <size>
+            <width>90</width>
+            <height>31</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>    简介    </string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget_2" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="accept_pushButton">
+        <property name="text">
+         <string>确认</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="reject_pushButton">
+        <property name="text">
+         <string>取消</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="reset_pushButton">
+        <property name="text">
+         <string>重置</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

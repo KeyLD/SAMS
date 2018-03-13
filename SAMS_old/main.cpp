@@ -4,7 +4,7 @@
 #include <QTextCodec>
 #include <exception>
 
-QString path = "/home/key/Code/c++_code/qt/Student_association_management_system/resource/";
+QString path;
 KeyList *student_list;
 KeyList *association_list;
 
@@ -20,8 +20,10 @@ QMap<int,AssociationNode> *association_DB;
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    path = QCoreApplication::applicationDirPath() + "/resource/";
 
     MainWindow w;
+
     w.show();
 
     return a.exec();
